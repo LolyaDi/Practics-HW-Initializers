@@ -1,0 +1,6 @@
+C:\Users\ww\source\repos\CitiesCatalog\CitiesCatalog.Models.Abstract\bin\Debug\CitiesCatalog.Models.Abstract.dll
+C:\Users\ww\source\repos\CitiesCatalog\CitiesCatalog.Models.Abstract\bin\Debug\CitiesCatalog.Models.Abstract.pdb
+C:\Users\ww\source\repos\CitiesCatalog\CitiesCatalog.Models.Abstract\obj\Debug\CitiesCatalog.Models.Abstract.csprojAssemblyReference.cache
+C:\Users\ww\source\repos\CitiesCatalog\CitiesCatalog.Models.Abstract\obj\Debug\CitiesCatalog.Models.Abstract.csproj.CoreCompileInputs.cache
+C:\Users\ww\source\repos\CitiesCatalog\CitiesCatalog.Models.Abstract\obj\Debug\CitiesCatalog.Models.Abstract.dll
+C:\Users\ww\source\repos\CitiesCatalog\CitiesCatalog.Models.Abstract\obj\Debug\CitiesCatalog.Models.Abstract.pdb
