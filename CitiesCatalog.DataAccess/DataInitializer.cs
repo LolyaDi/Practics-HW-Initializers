@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace CitiesCatalog.DataAccess
 {
-    public class DataInitializer: CreateDatabaseIfNotExists<DataContext>
+    public class DataInitializer: DropCreateDatabaseAlways<DataContext>
     {
         private List<City> cities;
 

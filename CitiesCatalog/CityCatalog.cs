@@ -1,7 +1,6 @@
 ﻿using CitiesCatalog.Models;
 using CitiesCatalog.Services.Abstract;
 using System;
-using System.Data.Entity.Infrastructure;
 using System.Windows.Forms;
 
 namespace CitiesCatalog
@@ -49,7 +48,7 @@ namespace CitiesCatalog
             _service.Dispose();
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void ButtonOK_Click(object sender, EventArgs e)
         {
             if (textBoxLastName.Text == "" || textBoxCityCode.Text == "" || textBoxFirstName.Text == "" || textBoxTelephoneNumber.Text == "")
             {
@@ -63,7 +62,7 @@ namespace CitiesCatalog
             
             _service._context.Cities.Attach(city);
 
-            var user = new User
+            var contact = new Contact
             {
                 LastName = textBoxLastName.Text,
                 FirstName = textBoxFirstName.Text,
@@ -73,24 +72,24 @@ namespace CitiesCatalog
 
             try
             {
-                _service.Insert(user);
+                _service.Insert(contact);
 
                 labelResult.Text = "Пользователь успешно добавлен!";
             }
-            catch (DbUpdateException exception)
+            catch (System.Data.Entity.Infrastructure.DbUpdateException exception)
             {
                 if (exception.InnerException.InnerException.Message.ToLower().Contains("unique"))
                 {
                     labelResult.Text = "Такой номер телефона уже\nесть в базе данных!";
                 }
-                else
-                {
-                    labelResult.Text = "Неправильный ввод данных!\n";
-                }
             }
-            catch (Exception)
+            catch (System.Data.Entity.Validation.DbEntityValidationException)
             {
-                labelResult.Text = "Произошла ошибка!";
+                labelResult.Text = " Неверный ввод данных!";
+            }
+            catch
+            {
+                labelResult.Text = " Произошла ошибка!";
             }
             finally
             {
